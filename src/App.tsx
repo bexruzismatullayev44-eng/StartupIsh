@@ -78,6 +78,8 @@
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import MainPage from "./pages/sahifalar/MainPage";
+import MainJobs from "./pages/sahifalar/MainJobs";
+import MainWorker from "./pages/sahifalar/MainWorker";
 
 const App = () => {
   return (
@@ -88,7 +90,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/MainPage" element={<MainPage />} />
-
+ <Route path="/MainProduct" element={<MainWorker />} />
+        <Route path="/MainCategory" element={<MainJobs />} />
       </Routes>
     </div>
   )

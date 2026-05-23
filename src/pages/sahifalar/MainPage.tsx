@@ -1,7 +1,7 @@
 import Footer from "../../components/Home.tsx/Footer";
 import Header from "../../components/Home.tsx/Header";
 import Jobs from "../../components/Home.tsx/Jobs";
-import Workers from "../../components/Home.tsx/workers"
+import Workers from "../../components/Home.tsx/Workers"
 
 const MainPage = () => {
   return (
