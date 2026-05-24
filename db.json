@@ -1,14 +1,14 @@
 {
   "jobs": [
     {
-      "name": "Oyoq kiyimlar",
+      "name": "Dasturchilar",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0buW8V4uGamAN1Xb7wlr-5wCjaeirRKcBOg&s",
       "id": "deb2"
     }
   ],
   "workers": [],
   "users": [
-        {
+    {
       "id": "e486",
       "fullName": "Bexruz Ismatullayev",
       "age": 16,
@@ -17,12 +17,12 @@
       "role": "admin"
     },
     {
-      "fullName": "t",
-      "age": null,
-      "email": "f",
-      "password": "f",
-      "role": "user",
-      "id": "uLaB1dizVg4"
+      "fullName": "bitta",
+      "age": 12,
+      "email": "bitta",
+      "password": "1234",
+      "role": "worker",
+      "id": "bzI-iduCJqU"
     }
   ],
   "buyurtmalar": [],
