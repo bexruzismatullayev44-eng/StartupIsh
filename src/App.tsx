@@ -1,5 +1,3 @@
-
-
 // import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 // import { useEffect } from "react";
 // import { Toaster } from "react-hot-toast";
@@ -15,7 +13,6 @@
 // import MainPage from "./pages/sahifalar/MainPage";
 // import MainProducts from "./pages/sahifalar/MainProduct";
 // import MainCategory from "./pages/sahifalar/MainCategory";
-
 
 // function App() {
 //   const { pathname } = useLocation();
@@ -48,53 +45,71 @@
 //       <>
 //         <Toaster />
 //       </>
-//       <Routes>
-//         <Route path="/" element={<MainPage />} />
-//         <Route path="/MainPage" element={<MainPage />} />
-//         <Route path="/MainProduct" element={<MainProducts />} />
-//         <Route path="/MainCategory" element={<MainCategory />} />
-//         <Route path="/product/:id" element={<ProductDetailed/>}/>
+// <Routes>
+//   <Route path="/" element={<MainPage />} />
+//   <Route path="/MainPage" element={<MainPage />} />
+//   <Route path="/MainProduct" element={<MainProducts />} />
+//   <Route path="/MainCategory" element={<MainCategory />} />
+//   <Route path="/product/:id" element={<ProductDetailed/>}/>
 
-//         {/* Auth routes */}
-//         <Route path="/register" element={<Register />} />
-//         <Route path="/login" element={<Login />} />
+//   {/* Auth routes */}
+//   <Route path="/register" element={<Register />} />
+//   <Route path="/login" element={<Login />} />
 
-//         {/* Admin routes */}
-//         <Route path="/admin" element={<Admin />}>
-//           <Route path="/admin/categories" element={<Categories />} />
+//   {/* Admin routes */}
+//   <Route path="/admin" element={<Admin />}>
+//     <Route path="/admin/categories" element={<Categories />} />
 
-//           <Route path="/admin/dashboard" element={<Dashboard />} />
-//           <Route path="/admin/orders" element={<Orders />} />
-//           <Route path="/admin/users" element={<Users />} />
-//         </Route>
-//       </Routes>
+//     <Route path="/admin/dashboard" element={<Dashboard />} />
+//     <Route path="/admin/orders" element={<Orders />} />
+//     <Route path="/admin/users" element={<Users />} />
+//   </Route>
+// </Routes>
 //     </div>
 //   );
 // }
 
 // export default App;
 
-
-import { Routes, Route } from "react-router-dom";
+import * as reactRouterDom from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import MainPage from "./pages/sahifalar/MainPage";
 import MainJobs from "./pages/sahifalar/MainJobs";
 import MainWorker from "./pages/sahifalar/MainWorker";
+import Admin from "./pages/admin/Admin";
+import Jobs from "./pages/admin/Jobs";
+import Workers from "./pages/admin/Workers";
+import Dashboard from "./pages/admin/Dashboard";
+import Orders from "./pages/admin/Orders";
+import Users from "./pages/admin/Users";
+import Register from "./pages/auth/Register";
+import Login from "./pages/auth/Login";
 
-const App = () => {
-  return (
-    <div>
-      <>
-        <Toaster />
-      </>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/MainPage" element={<MainPage />} />
- <Route path="/MainProduct" element={<MainWorker />} />
-        <Route path="/MainCategory" element={<MainJobs />} />
-      </Routes>
-    </div>
-  )
-}
 
-export default App
+const App = () => (
+  <div>
+    <>
+      <Toaster />
+    </>
+    <reactRouterDom.Routes>
+      <reactRouterDom.Route path="/" element={<MainPage />} />
+      <reactRouterDom.Route path="/MainPage" element={<MainPage />} />
+      <reactRouterDom.Route path="/MainProduct" element={<MainWorker />} />
+      <reactRouterDom.Route path="/MainCategory" element={<MainJobs />} />
+
+      <reactRouterDom.Route path="/register" element={<Register />} />
+      <reactRouterDom.Route path="/login" element={<Login />} />
+
+      {/* Admin routes */}
+      <reactRouterDom.Route path="/admin" element={<Admin />}>
+        <reactRouterDom.Route path="/admin/categories" element={<Jobs />} />
+        <reactRouterDom.Route path="/admin/product" element={<Workers />} />
+        <reactRouterDom.Route path="/admin/dashboard" element={<Dashboard />} />
+        <reactRouterDom.Route path="/admin/orders" element={<Orders />} />
+        <reactRouterDom.Route path="/admin/users" element={<Users />} />
+      </reactRouterDom.Route>
+    </reactRouterDom.Routes>
+  </div>
+);
+
+export default App;

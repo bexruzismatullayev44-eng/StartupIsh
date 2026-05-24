@@ -21,7 +21,6 @@ export default function Login() {
       }
 
       if (data[0].password === password) {
-        // Role va id saqlaymiz
         localStorage.setItem("token", data[0].id);
         localStorage.setItem("role", data[0].role);
 

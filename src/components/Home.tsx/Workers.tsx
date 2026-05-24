@@ -14,7 +14,7 @@ const Workers = () => {
 
   const getWorker = async () => {
     try {
-      const { data } = await axios.get<Worker[]>(`${API}/Workers`);
+      const { data } = await axios.get<Worker[]>(`${API}/workers`);
       setWorkers(data);
     } catch (error) {
       console.log(error);

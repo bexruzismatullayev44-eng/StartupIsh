@@ -6,7 +6,25 @@
       "id": "deb2"
     }
   ],
-  "workers":[],
-  "users":[],
-  "buyurtmalar":[],
+  "workers": [],
+  "users": [
+        {
+      "id": "e486",
+      "fullName": "Bexruz Ismatullayev",
+      "age": 16,
+      "email": "Admin@gmail.com",
+      "password": "osonku",
+      "role": "admin"
+    },
+    {
+      "fullName": "t",
+      "age": null,
+      "email": "f",
+      "password": "f",
+      "role": "user",
+      "id": "uLaB1dizVg4"
+    }
+  ],
+  "buyurtmalar": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }

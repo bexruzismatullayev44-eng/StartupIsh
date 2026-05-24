@@ -3,6 +3,7 @@ export const API = "http://localhost:3000";
 
 export enum Role {
     USER = "user",
+    WORKER = "worker",
     ADMIN = "admin"
 }
 
