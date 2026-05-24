@@ -27,12 +27,13 @@ export type Worker = {
   id: string;
   userId: string;
   title: string;
-  price: number;     
+  price: number;
   images: string[];
   jobs: Jobs;
   description: string;
   experience: string;
-  jobId: string;      
+  jobId: string;
+  city: string;
 };
 
 

@@ -71,6 +71,15 @@
 
 // export default App;
 
+
+
+
+
+
+
+
+
+
 import * as reactRouterDom from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import MainPage from "./pages/sahifalar/MainPage";
@@ -84,6 +93,7 @@ import Orders from "./pages/admin/Orders";
 import Users from "./pages/admin/Users";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
+import WorkerAnketa from "./components/Home.tsx/WorkerAnketa";
 
 
 const App = () => (
@@ -96,14 +106,15 @@ const App = () => (
       <reactRouterDom.Route path="/MainPage" element={<MainPage />} />
       <reactRouterDom.Route path="/MainProduct" element={<MainWorker />} />
       <reactRouterDom.Route path="/MainCategory" element={<MainJobs />} />
+      <reactRouterDom.Route path="/worker/anketa" element={<WorkerAnketa />} />
 
       <reactRouterDom.Route path="/register" element={<Register />} />
       <reactRouterDom.Route path="/login" element={<Login />} />
 
       {/* Admin routes */}
       <reactRouterDom.Route path="/admin" element={<Admin />}>
-        <reactRouterDom.Route path="/admin/categories" element={<Jobs />} />
-        <reactRouterDom.Route path="/admin/product" element={<Workers />} />
+        <reactRouterDom.Route path="/admin/jobs" element={<Jobs />} />
+        <reactRouterDom.Route path="/admin/workers" element={<Workers />} />
         <reactRouterDom.Route path="/admin/dashboard" element={<Dashboard />} />
         <reactRouterDom.Route path="/admin/orders" element={<Orders />} />
         <reactRouterDom.Route path="/admin/users" element={<Users />} />

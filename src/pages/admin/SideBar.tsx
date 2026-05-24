@@ -37,23 +37,23 @@ const SideBar = () => {
           </button>
         </Link>
 
-        <Link to="/admin/categories">
+        <Link to="/admin/jobs">
           <button
             className={`btn btn-outline-primary w-full mb-3 ${
               isActive("/admin/categories") ? "active" : ""
             }`}
           >
-            Categories
+            Jobs
           </button>
         </Link>
 
-        <Link to="/admin/product">
+        <Link to="/admin/workers">
           <button
             className={`btn btn-outline-primary w-full mb-3 ${
               isActive("/admin/product") ? "active" : ""
             }`}
           >
-            Products
+            Workers
           </button>
         </Link>
 
