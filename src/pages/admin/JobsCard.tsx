@@ -23,10 +23,10 @@ const JobsCard = ({ image, name, index, editCategory }: Props) => {
       <td className="p-3 font-semibold text-gray-900 dark:text-white">
         {name}
       </td>
-      <td className="p-3 text-right">
+      <td className="p-3 ml-2 text-left">
         <button
           onClick={editCategory}
-          className="bg-blue-600 hover:bg-blue-700 text-white p-2.5 rounded-lg transition-all active:scale-95 shadow-md shadow-blue-500/20"
+          className="bg-blue-600 hover:bg-blue-700 text-white p-2.5 rounded-lg! transition-all active:scale-95 shadow-md shadow-blue-500/20"
         >
           <MdOutlineEdit size={20} />
         </button>
@@ -36,3 +36,6 @@ const JobsCard = ({ image, name, index, editCategory }: Props) => {
 };
 
 export default JobsCard;
+
+
+

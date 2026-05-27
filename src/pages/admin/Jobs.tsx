@@ -78,7 +78,6 @@ const Jobs = () => {
         </button>
       </div>
 
-      {/* Jadval */}
       <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700! shadow-sm bg-white! dark:bg-slate-800!">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
@@ -93,7 +92,7 @@ const Jobs = () => {
                 <th className="p-4 text-gray-500 dark:text-gray-400 font-semibold uppercase text-xs tracking-wider">
                   Name
                 </th>
-                <th className="p-4 text-gray-500 dark:text-gray-400 font-semibold uppercase text-xs tracking-wider text-right">
+                <th className="p-4 text-gray-500 dark:text-gray-400 font-semibold uppercase text-xs tracking-wider">
                   Actions
                 </th>
               </tr>

@@ -94,7 +94,8 @@ import Users from "./pages/admin/Users";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
 import WorkerAnketa from "./components/Home.tsx/WorkerAnketa";
-
+import Cart from "./Providers/Card";
+import MainOrders from "./pages/sahifalar/MainOrders";
 
 const App = () => (
   <div>
@@ -104,9 +105,11 @@ const App = () => (
     <reactRouterDom.Routes>
       <reactRouterDom.Route path="/" element={<MainPage />} />
       <reactRouterDom.Route path="/MainPage" element={<MainPage />} />
-      <reactRouterDom.Route path="/MainProduct" element={<MainWorker />} />
-      <reactRouterDom.Route path="/MainCategory" element={<MainJobs />} />
+      <reactRouterDom.Route path="/MainWorker" element={<MainWorker />} />
+      <reactRouterDom.Route path="/MainJobs" element={<MainJobs />} />
+      <reactRouterDom.Route path="/MainOrders" element={<MainOrders />} />
       <reactRouterDom.Route path="/worker/anketa" element={<WorkerAnketa />} />
+      <reactRouterDom.Route path="/cart" element={<Cart/>} />
 
       <reactRouterDom.Route path="/register" element={<Register />} />
       <reactRouterDom.Route path="/login" element={<Login />} />
