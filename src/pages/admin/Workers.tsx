@@ -299,7 +299,6 @@ const Workers = () => {
   const [workers, setWorkers] = useState<Worker[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  // Serverdan ma'lumotlarni o'qib olish (GET)
   const getWorkers = async () => {
     try {
       setLoading(true);
@@ -316,7 +315,6 @@ const Workers = () => {
     getWorkers();
   }, []);
 
-  // Ma'lumotni o'chirish (DELETE)
   const handleDelete = async (id: string) => {
     if (window.confirm("O'chirishni tasdiqlaysizmi?")) {
       try {
@@ -329,7 +327,7 @@ const Workers = () => {
   };
 
   return (
-    <div className="p-6 min-h-screen transition-colors dark:bg-gray-900">
+    <div className="p-6 min-h-screen transition-colors ">
       {/* Header qismi */}
       <div className="border dark:border-gray-700 h-20 rounded-xl shadow-sm flex items-center justify-between p-6 bg-gray-50 dark:bg-slate-800">
         <h1 className="text-2xl font-bold text-gray-800 dark:text-white!">
@@ -368,7 +366,7 @@ const Workers = () => {
               {workers.map((worker, index) => (
                 <tr 
                   key={worker.id} 
-                  className="hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+                  className="hover:bg-gray-50 dark:border-gray-700! dark:bg-[#1e293b]!  dark:hover:bg-[#334155]! transition-colors"
                 >
                   <td className="p-4 text-gray-700 dark:text-gray-300">{index + 1}</td>
                   <td className="p-4 font-medium text-gray-800 dark:text-white">{worker.title}</td>

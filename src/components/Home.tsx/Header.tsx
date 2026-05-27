@@ -79,7 +79,7 @@ const Header = () => {
               </NavLink>
 
               <NavLink
-                to="/MainProduct"
+                to="/MainWorker"
                 className={({ isActive }) =>
                   `px-2 py-1 no-underline! text-gray-800! hover:text-gray-800! transition-color! ${
                     isActive

@@ -9,7 +9,7 @@ interface Props {
 
 const JobsCard = ({ image, name, index, editCategory }: Props) => {
   return (
-    <tr className="border-b border-gray-200 dark:border-gray-700! hover:bg-gray-50! dark:hover:bg-slate-800! transition-colors">
+    <tr className="border-b border-gray-200 dark:border-gray-700! hover:bg-gray-50! dark:hover:bg-[#334155]! transition-colors">
       <td className="p-3 text-gray-700! dark:text-gray-300! font-medium">
         {index}
       </td>
