@@ -61,7 +61,7 @@ const Header = () => {
               <span className="text-[22px] font-bold tracking-wide text-sky-400">
                 WORKER
               </span>
-              <div className="h-[2px] w-full bg-sky-400 opacity-40 rounded-full mt-0.5" />
+              <div className="h-0.5 w-full bg-sky-400 opacity-40 rounded-full mt-0.5" />
             </div>
 
             <ul className="flex gap-4 list-none">
@@ -103,8 +103,6 @@ const Header = () => {
               >
                 Kategoriyalar
               </NavLink>
-
-              {/* Faqat ishchi bo'lsa ko'rinadi */}
               {currentUser?.role === "worker" && (
                 <NavLink
                   to="/MainOrders"
@@ -125,7 +123,7 @@ const Header = () => {
           <div className="my-auto flex gap-7.5">
             <button
               onClick={toogleDark}
-              className="p-2 rounded-full hover:bg-blue-100 transition text-gray-700 dark:text-white!"
+              className="p-2 rounded-full! transition text-gray-700 dark:text-white!"
             >
               {currentTheme === "dark" ? (
                 <FaRegSun size={20} />
@@ -162,7 +160,7 @@ const Header = () => {
             ) : (
               <button
                 onClick={() => navigate("/register")}
-                className="no-underline text-inherit"
+                className="no-underline text-inherit dark:text-white!"
               >
                 <CiUser />
               </button>

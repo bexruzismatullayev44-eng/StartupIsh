@@ -10,13 +10,13 @@ function Register() {
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("user"); // "user" | "worker"
+  const [role, setRole] = useState("user"); 
   const [visible, setVisible] = useState(false);
 
   const navigate = useNavigate();
 
   const handleRegister = async () => {
-    // 🎯 VALIDATION: Ma'lumotlar bo'shligini tekshirish
+
     if (!fullName.trim()) {
       toast.error("Iltimos, ism va familiyangizni kiriting!");
       return;
@@ -32,7 +32,7 @@ function Register() {
       return;
     }
 
-    // Oddiygina email formatini tekshirish
+
     if (!email.includes("@")) {
       toast.error("Email formati noto'g'ri!");
       return;
@@ -48,13 +48,13 @@ function Register() {
       return;
     }
 
-    // Hamma ma'lumotlar to'g'ri bo'lsa, obyekt yaratamiz
+
     const userObj = {
       fullName: fullName.trim(),
       age: parseInt(age),
       email: email.trim(),
       password: password,
-      role, // tanlangan rol
+      role,
     };
 
     try {
@@ -83,7 +83,6 @@ function Register() {
         </span>
 
         <div className="w-full max-w-md mx-auto space-y-4">
-          {/* Rol tanlash */}
           <select
             value={role}
             onChange={(e) => setRole(e.target.value)}

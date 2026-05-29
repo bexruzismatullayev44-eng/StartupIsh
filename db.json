@@ -11,7 +11,7 @@
       "id": "A5FCvve__FY"
     },
     {
-      "name": "White hat Haker",
+      "name": "White hat Hacker",
       "image": "https://t4.ftcdn.net/jpg/09/70/52/39/360_F_970523969_ZvOplrhWSdSQQpGiT1w8la3eUhC88jOY.jpg",
       "id": "JU4M709St_4"
     }
@@ -138,6 +138,35 @@
       "createAt": "2026-05-27T11:29:23.218Z",
       "UserId": "ULyx1f9MbEw",
       "id": "b5BvnkkgoOY"
+    },
+    {
+      "fullName": "brbalo",
+      "phone": "123",
+      "address": "wrfgb",
+      "orderItems": [
+        {
+          "userId": "RouCCdHwGtk",
+          "title": "Begona begonavich",
+          "jobId": "A5FCvve__FY",
+          "jobs": {
+            "name": "SMM",
+            "image": "https://media.istockphoto.com/id/1196172395/photo/in-the-photo-studio-with-professional-equipment-portrait-of-the-famous-photographer-holding.jpg?s=612x612&w=0&k=20&c=utO4aHRyA5ZUAYxbk9NelmhR1_E5-AOWUWcqDMP-NXE=",
+            "id": "A5FCvve__FY"
+          },
+          "price": 2000,
+          "experience": "1",
+          "description": "Rasm videolarni ideal ravishta olishdr",
+          "city": "Toshkent",
+          "images": [],
+          "id": "LRaJ_Ta8JpM",
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 4000,
+      "status": "yangi",
+      "createAt": "2026-05-27T13:08:24.729Z",
+      "UserId": "vuyvCY0Feag",
+      "id": "5CWj01L9jNA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

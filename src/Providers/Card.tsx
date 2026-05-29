@@ -101,7 +101,7 @@ const Cart = () => {
 
       {!cart.length ? (
         <div className="flex flex-col items-center justify-center h-[70vh] text-center px-4">
-          <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200">
+          <h2 className="text-3xl font-bold text-gray-800 dark:text-white!">
             Savatingiz bo'sh
           </h2>
           <p className="text-gray-500 mt-3 max-w-md dark:text-gray-400">
@@ -110,7 +110,7 @@ const Cart = () => {
           </p>
           <button
             onClick={() => navigate("/MainWorker")}
-            className="mt-6 px-6 py-2.5 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md active:scale-95 font-semibold text-sm"
+            className="mt-6 px-6 py-2.5 rounded-xl! bg-blue-600 text-white hover:bg-blue-700 text-sm"
           >
             Mutaxassis xarid qilish
           </button>
@@ -118,10 +118,10 @@ const Cart = () => {
       ) : (
         <>
           <div className="max-w-7xl mx-auto px-4 pb-2 pt-28 flex items-center justify-between">
-            <h3 className="text-3xl font-black tracking-tight">Savat</h3>
+            <h3 className="text-3xl font-black tracking-tight dark:text-white!">Savat</h3>
             <button
               onClick={clearAll}
-              className="px-4 py-2 bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-950/60 rounded-xl text-sm font-semibold border border-red-100 dark:border-red-900/30 transition-all"
+              className="px-4 py-2 dark:bg-red-950/30! text-red-600 dark:text-red-400 hover:bg-red-100 dark:hover:bg-red-950/60 rounded-xl! text-sm font-semibold border dark:border-red-900/30!"
             >
               Hammasini o'chirish
             </button>
@@ -138,19 +138,19 @@ const Cart = () => {
                 return (
                   <div
                     key={item.id}
-                    className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700/60 shadow-sm gap-4"
+                    className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white dark:bg-gray-800! p-4 rounded-2xl border border-gray-100 dark:border-gray-700/60 shadow-sm gap-4"
                   >
                     <div className="flex items-center gap-4 w-full sm:w-auto">
                       <img
                         src={imgUrl}
-                        className="w-16 h-16 rounded-xl object-cover border border-gray-50 dark:border-gray-700"
+                        className="w-16 h-16 rounded-xl object-cover border border-gray-50 dark:border-gray-700!"
                         alt={item.title}
                       />
                       <div className="flex-1">
-                        <h5 className="font-bold text-gray-900 dark:text-white line-clamp-1">
+                        <h5 className="font-bold text-gray-900 dark:text-white! line-clamp-1">
                           {item.title}
                         </h5>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+                        <p className="text-sm text-gray-500 dark:text-gray-400! mt-0.5">
                           {item.price?.toLocaleString()} so'm
                         </p>
                       </div>
@@ -160,7 +160,7 @@ const Cart = () => {
                       <div className="flex items-center gap-3 bg-gray-50 dark:bg-gray-700/50 p-1 rounded-xl border border-gray-100 dark:border-gray-600">
                         <button
                           onClick={() => decreaseQuantity(item.id)}
-                          className="p-2 rounded-lg bg-white dark:bg-gray-600 shadow-sm text-gray-500 dark:text-gray-300 hover:text-red-500 transition-all active:scale-90"
+                          className="p-2 rounded-lg! bg-white dark:bg-gray-600! shadow-sm text-gray-500! dark:text-gray-300! hover:text-red-500"
                         >
                           <FaMinus size={10} />
                         </button>
@@ -169,7 +169,7 @@ const Cart = () => {
                         </span>
                         <button
                           onClick={() => increaseQuantity(item.id)}
-                          className="p-2 rounded-lg bg-white dark:bg-gray-600 shadow-sm text-gray-500 dark:text-gray-300 hover:text-blue-500 transition-all active:scale-90"
+                          className="p-2 rounded-lg! bg-white dark:bg-gray-600! shadow-sm text-gray-500! dark:text-gray-300! hover:text-blue-500"
                         >
                           <FaPlus size={10} />
                         </button>
@@ -181,7 +181,7 @@ const Cart = () => {
                         </span>
                         <button
                           onClick={() => removeItem(item.id)}
-                          className="p-2.5 text-gray-400 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/30 rounded-xl transition-all"
+                          className="p-2.5 text-gray-400 hover:text-red-500 dark:hover:text-red-400! hover:bg-red-50 dark:hover:bg-red-950/30! rounded-xl! transition-all"
                         >
                           <FaTrash size={14} />
                         </button>
@@ -192,12 +192,12 @@ const Cart = () => {
               })}
             </div>
 
-            <div className="w-full lg:w-[35%] bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700/60 h-fit shadow-md space-y-6">
+            <div className="w-full lg:w-[35%] bg-white dark:bg-gray-800! p-6 rounded-2xl border border-gray-100 dark:border-gray-700/60! ">
               <div>
                 <p className="text-xs font-semibold text-gray-400 dark:text-gray-400 uppercase tracking-wider mb-1">
                   Buyurtma xulosasi
                 </p>
-                <h4 className="text-2xl font-black text-blue-600 dark:text-blue-400">
+                <h4 className="text-2xl font-black text-blue-600 dark:text-blue-400!">
                   Jami: {calculateTotalPrice().toLocaleString()} so'm
                 </h4>
               </div>
@@ -243,7 +243,7 @@ const Cart = () => {
 
                 <button
                   onClick={handleBuy}
-                  className="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-base mt-2 hover:bg-blue-700 transition-all shadow-md active:scale-95"
+                  className="w-full bg-blue-600 text-white py-3 rounded-xl! font-bold text-base mt-2 hover:bg-blue-700 transition-all shadow-md active:scale-95"
                 >
                   Sotib olishni tasdiqlash
                 </button>

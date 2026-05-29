@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom"; // 1. useLocation import qilinadi
+import { useLocation } from "react-router-dom";
 import { CiSearch, CiHeart, CiShoppingCart } from "react-icons/ci";
 import Header from "../../components/Home.tsx/Header";
 import Footer from "../../components/Home.tsx/Footer";
@@ -78,12 +78,12 @@ const MainWorker = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 pt-28 pb-20">
-        <h1 className="text-3xl font-bold text-gray-950 dark:text-white mb-8 tracking-tight">
+        <h1 className="text-3xl font-bold text-gray-950 dark:text-white! mb-8 tracking-tight">
           Mavjud Mutaxassislar
         </h1>
 
         <div className="flex flex-col md:flex-row gap-8">
-          <aside className="w-full md:w-64 shrink-0 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 h-fit space-y-8">
+          <aside className="w-full md:w-64 shrink-0 bg-white dark:bg-gray-800! p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 h-fit space-y-8">
             <div>
               <p className="text-xs font-semibold text-gray-400 dark:text-gray-400 uppercase tracking-wider mb-3">
                 Qidirish
@@ -107,7 +107,7 @@ const MainWorker = () => {
               <div className="flex flex-col gap-1.5">
                 <button
                   onClick={() => setActiveCategory("Barchasi")}
-                  className={`text-left px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                  className={`text-left px-4 py-2 rounded-xl! text-sm font-medium transition-all ${
                     activeCategory === "Barchasi"
                       ? "bg-blue-600 text-white shadow-md"
                       : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -119,7 +119,7 @@ const MainWorker = () => {
                   <button
                     key={job.id}
                     onClick={() => setActiveCategory(job)}
-                    className={`text-left px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                    className={`text-left px-4 py-2 rounded-xl! text-sm font-medium transition-all ${
                       typeof activeCategory !== "string" &&
                       activeCategory.id === job.id
                         ? "bg-blue-600 text-white shadow-md"
@@ -161,7 +161,7 @@ const MainWorker = () => {
                 {[1, 2, 3, 4, 5, 6].map((n) => (
                   <div
                     key={n}
-                    className="animate-pulse bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 h-95 rounded-2xl"
+                    className="animate-pulse bg-white dark:bg-gray-800! border border-gray-100 dark:border-gray-700 h-95 rounded-2xl"
                   ></div>
                 ))}
               </div>
@@ -176,16 +176,16 @@ const MainWorker = () => {
                   return (
                     <div
                       key={worker.id}
-                      className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-gray-100 dark:border-gray-700 transition-all duration-300 flex flex-col justify-between"
+                      className="group bg-white dark:bg-gray-800! rounded-2xl overflow-hidden shadow-sm hover:shadow-md border border-gray-100 dark:border-gray-700 transition-all duration-300 flex flex-col justify-between"
                     >
                       <div>
-                        <div className="relative aspect-square overflow-hidden bg-gray-100 dark:bg-gray-700">
+                        <div className="relative aspect-square overflow-hidden bg-gray-100 dark:bg-gray-700!">
                           <img
                             src={workerImage}
                             alt={worker.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           />
-                          <button className="absolute top-3 right-3 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md p-2 rounded-full text-gray-500 hover:text-red-500 transition-all active:scale-90 shadow-sm">
+                          <button className="absolute top-3 right-3 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md p-2 rounded-full! text-gray-500 hover:text-red-500 transition-all active:scale-90 shadow-sm">
                             <CiHeart className="w-5 h-5" />
                           </button>
                           <span className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2.5 py-1 rounded-md font-medium">
@@ -194,14 +194,14 @@ const MainWorker = () => {
                         </div>
                         <div className="p-4">
                           <div className="flex items-center justify-between mb-1">
-                            <span className="text-[11px] text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider">
+                            <span className="text-[11px] text-blue-600 dark:text-blue-400! font-bold uppercase tracking-wider">
                               {worker.jobs?.name || "Kategoriya"}
                             </span>
                             <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">
                               Tajriba: {worker.experience}
                             </span>
                           </div>
-                          <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 line-clamp-1 group-hover:text-blue-600 transition-colors mb-2">
+                          <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100! line-clamp-1 group-hover:text-blue-600 transition-colors mb-2">
                             {worker.title}
                           </h3>
                           <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-2">
@@ -220,7 +220,7 @@ const MainWorker = () => {
                         </div>
                         <button
                           onClick={() => addToCart(worker)}
-                          className="bg-gray-900 dark:bg-gray-700 text-white p-2.5 rounded-xl hover:bg-blue-600 dark:hover:bg-blue-600 transition-all active:scale-95 shadow-sm"
+                          className="bg-gray-900 dark:bg-gray-700 text-white p-2.5 rounded-full! hover:bg-blue-600 dark:hover:bg-blue-600 transition-all active:scale-95 shadow-sm"
                         >
                           <CiShoppingCart className="w-5 h-5" />
                         </button>
@@ -230,11 +230,11 @@ const MainWorker = () => {
                 })}
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center text-center py-20 px-4 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                <div className="w-16 h-16 bg-gray-50 dark:bg-gray-700 rounded-full flex items-center justify-center mb-4">
+              <div className="flex flex-col items-center justify-center text-center py-20 px-4 bg-white dark:bg-gray-800! rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                <div className="w-16 h-16 bg-gray-50 dark:bg-gray-700 rounded-full! flex items-center justify-center mb-4">
                   <CiSearch className="w-8 h-8 text-gray-400" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white! mb-1">
                   Hech qanday mutaxassis topilmadi
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 max-w-sm mb-6">
@@ -247,7 +247,7 @@ const MainWorker = () => {
                     setPrice(maxPriceLimit);
                     setSearchQuery("");
                   }}
-                  className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl shadow-md transition-all active:scale-95"
+                  className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl!"
                 >
                   Filtrlarni tozalash
                 </button>

@@ -39,8 +39,8 @@ const jobs = () => {
   return (
     <div className="p-5 max-w-300 mx-auto font-sans dark:bg-gray-700">
       <div className="flex justify-between items-end mb-5">
-        <h2 className="m-0 text-2xl text-gray-800 font-semibold">
-          Kategoriyalar
+        <h2 className="m-0 text-2xl text-gray-800 font-semibold dark:text-white!">
+          Ishlar
         </h2>
         <Link
           to="/MainJobs"

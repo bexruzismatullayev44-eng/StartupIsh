@@ -71,10 +71,9 @@ const Dashboard = () => {
     <div className="p-5 min-h-screen bg-gray-50 dark:bg-gray-700 transition-colors duration-200">
       <h1 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white!">Dashboard</h1>
       
-      {/* Statisika Kartalari */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mb-8">
-        
-        {/* Ishchilar */}
+
         <div className="bg-white dark:bg-[#1e293b]! border border-gray-200 dark:border-gray-700 rounded-xl p-5 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
           <div className="flex justify-between items-center mb-3">
             <span className="text-gray-500 dark:text-gray-300! font-medium">Ishchilar</span>
@@ -84,8 +83,7 @@ const Dashboard = () => {
           </div>
           <span className="text-3xl font-bold text-gray-800 dark:text-white!">{workers.length}</span>
         </div>
-        
-        {/* Sohalar */}
+
         <div className="bg-white dark:bg-[#1e293b]! border border-gray-200 dark:border-gray-700 rounded-xl p-5 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
           <div className="flex justify-between items-center mb-3">
             <span className="text-gray-500 dark:text-gray-300! font-medium">Sohalar</span>
@@ -96,7 +94,7 @@ const Dashboard = () => {
           <span className="text-3xl font-bold text-gray-800 dark:text-white!">{jobs.length}</span>
         </div>
         
-        {/* Buyurtmalar */}
+
         <div className="bg-white dark:bg-[#1e293b]! border border-gray-200 dark:border-gray-700 rounded-xl p-5 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
           <div className="flex justify-between items-center mb-3">
             <span className="text-gray-500 dark:text-gray-300! font-medium">Buyurtmalar</span>
@@ -107,7 +105,6 @@ const Dashboard = () => {
           <span className="text-3xl font-bold text-gray-800 dark:text-white!">{orders.length}</span>
         </div>
 
-        {/* Foydalanuvchilar */}
         <div className="bg-white dark:bg-[#1e293b]! border border-gray-200 dark:border-gray-700 rounded-xl p-5 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
           <div className="flex justify-between items-center mb-3">
             <span className="text-gray-500 dark:text-gray-300! font-medium">Foydalanuvchilar</span>
@@ -119,7 +116,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* So'nggi Buyurtmalar Ro'yxati */}
       <div>
         <div className="border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm p-4 mb-4 bg-white dark:bg-[#1e293b]! transition-colors flex items-center justify-between">
           <h2 className="text-lg font-semibold text-gray-800 dark:text-white! flex items-center gap-2">
